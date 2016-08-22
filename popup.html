@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Sunarc Dashboard</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #Dstatus {
+        /* avoid an excessively wide status text */
+        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 300px;
+      }
+	  #Dstatus ul {display:block}
+	  #Dstatus ul li{display:inline; float:left;margin:8px}
+	  #Dstatus ul li a img{height:70px}
+	  #socials ul li{display:inline; float:left;margin:1px}
+	  #socials ul li a img{height:50px}
+	  #Dstatus h4{text-align:center}
+	  #socials h5{text-align:center}
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  <div id="Dstatus">
+  <h4>Sunarc Dashboard</h4>
+	<ul>
+		<li><a target='_blank' href='http://sunarctechnologies.com/'><img src='logos/sunarc.png'></a></li>
+		<li><a target='_blank' href='http://sunarcstudios.com/'><img src='logos/sunarc_studio.png'></a></li>
+		<li><a target='_blank' href='http://doaqa.com/'><img src='logos/doaqa.png'></a></li>
+		<li><a target='_blank' href='http://assessall.com/'><img src='logos/assessall.png'></a></li>
+	
+</ul>
+
+  </div>
+   <div id='socials'>
+   <h5>Like us on</h5>
+	 <ul>
+			<li><a target='_blank' href='https://www.facebook.com/sunarctechnologies'><img src='logos/facebook.png'></a></li>	
+		<li><a target='_blank' href='https://www.linkedin.com/company/sunarc-technologies'><img src='logos/linkedin.png'></a></li>
+		<li><a target='_blank' href='https://twitter.com/SunArc_tech'><img src='logos/twitter.png'></a></li>
+		<li><a target='_blank' href='https://www.youtube.com/user/sunarcstudios'><img src='logos/youtube.png'></a></li>
+		
+		</ul>
+   </div>
+    <img id="image-result" hidden>
+  </body>
+</html>
+

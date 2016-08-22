@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sunarc Dashboard",
+  "description": "All Sunarc products can be seen in new tab",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": {                    // optional
+            "19": "icon.png",           // optional
+            "38": "logo.png"            // optional
+          },
+    "default_popup": "popup.html"
+  },
+  "icons":{
+  "64":"logo.png"
+  },
+   "chrome_url_overrides": {
+    "newtab": "blank.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+
+}
